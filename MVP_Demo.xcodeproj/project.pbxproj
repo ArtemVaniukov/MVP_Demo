@@ -14,11 +14,16 @@
 		3A9E02DE27AFA77700BCBEDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9E02DC27AFA77700BCBEDE /* LaunchScreen.storyboard */; };
 		3A9E02F327AFA77700BCBEDE /* MVP_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E02F227AFA77700BCBEDE /* MVP_DemoUITests.swift */; };
 		3A9E02F527AFA77700BCBEDE /* MVP_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E02F427AFA77700BCBEDE /* MVP_DemoUITestsLaunchTests.swift */; };
-		3A9E030227AFA77F00BCBEDE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E030127AFA77F00BCBEDE /* Person.swift */; };
+		3A9E030227AFA77F00BCBEDE /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E030127AFA77F00BCBEDE /* Comment.swift */; };
 		3A9E030427AFA7AE00BCBEDE /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E030327AFA7AE00BCBEDE /* MainPresenter.swift */; };
 		3A9E030A27AFB25500BCBEDE /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E030927AFB25500BCBEDE /* ModuleBuilder.swift */; };
 		3A9E030C27AFB45300BCBEDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9E030B27AFB45300BCBEDE /* Main.storyboard */; };
 		3A9E030E27AFB5BC00BCBEDE /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E030D27AFB5BC00BCBEDE /* MainPresenterTest.swift */; };
+		3A9E031127AFBEA800BCBEDE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E031027AFBEA800BCBEDE /* NetworkService.swift */; };
+		3A9E031527AFCF4B00BCBEDE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E031427AFCF4B00BCBEDE /* DetailPresenter.swift */; };
+		3A9E031A27AFD0F200BCBEDE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E031927AFD0F200BCBEDE /* DetailViewController.swift */; };
+		3A9E031C27AFDDD500BCBEDE /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E031B27AFDDD500BCBEDE /* DetailTableViewCell.swift */; };
+		3A9E031E27AFE35900BCBEDE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E031D27AFE35900BCBEDE /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +55,16 @@
 		3A9E02EE27AFA77700BCBEDE /* MVP_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVP_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9E02F227AFA77700BCBEDE /* MVP_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_DemoUITests.swift; sourceTree = "<group>"; };
 		3A9E02F427AFA77700BCBEDE /* MVP_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3A9E030127AFA77F00BCBEDE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		3A9E030127AFA77F00BCBEDE /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		3A9E030327AFA7AE00BCBEDE /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		3A9E030927AFB25500BCBEDE /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		3A9E030B27AFB45300BCBEDE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3A9E030D27AFB5BC00BCBEDE /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
+		3A9E031027AFBEA800BCBEDE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3A9E031427AFCF4B00BCBEDE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		3A9E031927AFD0F200BCBEDE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3A9E031B27AFDDD500BCBEDE /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		3A9E031D27AFE35900BCBEDE /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,13 +116,13 @@
 			isa = PBXGroup;
 			children = (
 				3A9E030927AFB25500BCBEDE /* ModuleBuilder.swift */,
+				3A9E031727AFD0CB00BCBEDE /* DetailModule */,
 				3A9E030527AFAF0900BCBEDE /* MainModule */,
-				3A9E02D127AFA77600BCBEDE /* AppDelegate.swift */,
-				3A9E02D327AFA77600BCBEDE /* SceneDelegate.swift */,
+				3A9E031227AFBEC800BCBEDE /* ServiceLayer */,
+				3A9E031327AFBEED00BCBEDE /* Misc */,
 				3A9E02DA27AFA77700BCBEDE /* Assets.xcassets */,
-				3A9E02DC27AFA77700BCBEDE /* LaunchScreen.storyboard */,
-				3A9E030B27AFB45300BCBEDE /* Main.storyboard */,
 				3A9E02DF27AFA77700BCBEDE /* Info.plist */,
+				3A9E031F27AFE3C000BCBEDE /* Extensions */,
 			);
 			path = MVP_Demo;
 			sourceTree = "<group>";
@@ -147,7 +157,7 @@
 		3A9E030627AFAF1A00BCBEDE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3A9E030127AFA77F00BCBEDE /* Person.swift */,
+				3A9E030127AFA77F00BCBEDE /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +184,59 @@
 				3A9E030D27AFB5BC00BCBEDE /* MainPresenterTest.swift */,
 			);
 			path = TestMainModule;
+			sourceTree = "<group>";
+		};
+		3A9E031227AFBEC800BCBEDE /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E031027AFBEA800BCBEDE /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		3A9E031327AFBEED00BCBEDE /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E02D127AFA77600BCBEDE /* AppDelegate.swift */,
+				3A9E02D327AFA77600BCBEDE /* SceneDelegate.swift */,
+				3A9E02DC27AFA77700BCBEDE /* LaunchScreen.storyboard */,
+				3A9E030B27AFB45300BCBEDE /* Main.storyboard */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		3A9E031627AFD0BF00BCBEDE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E031427AFCF4B00BCBEDE /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3A9E031727AFD0CB00BCBEDE /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E031827AFD0DF00BCBEDE /* View */,
+				3A9E031627AFD0BF00BCBEDE /* Presenter */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		3A9E031827AFD0DF00BCBEDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E031927AFD0F200BCBEDE /* DetailViewController.swift */,
+				3A9E031B27AFDDD500BCBEDE /* DetailTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A9E031F27AFE3C000BCBEDE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E031D27AFE35900BCBEDE /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,12 +370,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9E031E27AFE35900BCBEDE /* UIView+Extension.swift in Sources */,
+				3A9E031A27AFD0F200BCBEDE /* DetailViewController.swift in Sources */,
 				3A9E030427AFA7AE00BCBEDE /* MainPresenter.swift in Sources */,
 				3A9E02D627AFA77600BCBEDE /* MainViewController.swift in Sources */,
 				3A9E02D227AFA77600BCBEDE /* AppDelegate.swift in Sources */,
-				3A9E030227AFA77F00BCBEDE /* Person.swift in Sources */,
+				3A9E031527AFCF4B00BCBEDE /* DetailPresenter.swift in Sources */,
+				3A9E030227AFA77F00BCBEDE /* Comment.swift in Sources */,
 				3A9E02D427AFA77600BCBEDE /* SceneDelegate.swift in Sources */,
 				3A9E030A27AFB25500BCBEDE /* ModuleBuilder.swift in Sources */,
+				3A9E031C27AFDDD500BCBEDE /* DetailTableViewCell.swift in Sources */,
+				3A9E031127AFBEA800BCBEDE /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,22 +11,11 @@ class MainViewController: UIViewController {
     
     var presenter: MainViewPresenter!
     
-    private var label: UILabel = {
-        $0.textAlignment = .center
-        $0.font = .preferredFont(forTextStyle: .headline, compatibleWith: .current).withSize(30)
-        $0.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 0.8)
-        $0.layer.cornerRadius = 5
+    private var tableView: UITableView = {
+        $0.register(DetailTableViewCell.self, forCellReuseIdentifier: "Cell")
+        $0.rowHeight = UITableView.automaticDimension
         return $0
-    }(UILabel(frame: CGRect(x: 0, y: 0, width: 400, height: 50)))
-    
-    private var button: UIButton = {
-        $0.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-        $0.setTitle("Press Me", for: .normal)
-        $0.backgroundColor = .systemBlue
-        $0.layer.cornerRadius = 25
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        return $0
-    }(UIButton())
+    }(UITableView())
     
 
     override func viewDidLoad() {
@@ -34,38 +23,68 @@ class MainViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        view.addSubview(label)
-        view.addSubview(button)
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        view.addAutoLayoutSubview(tableView)
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         setupLayout()
     }
-
-
-    @objc private func didTapButton() {
-        self.presenter.showGreeting()
-    }
     
 }
 
 extension MainViewController: MainViewProtocol {
-    func setGreeting(greeting: String) {
-        label.text = greeting
+    func success() {
+        tableView.reloadData()
+    }
+    
+    func failure(with error: Error) {        
+        let alertVC = UIAlertController(title: "WHOOPS!", message: error.localizedDescription, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: nil))
+        present(alertVC, animated: true, completion: nil)
+    }
+}
+
+// MARK: - TableView Data Source and Delegate
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        presenter.comments?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let comment = presenter.comments?[indexPath.row]
+        
+        cell.postIdLabel.text = "\(comment?.postId ?? -1)"
+        cell.headLabel.text = comment?.name
+        cell.bodyLabel.text = comment?.body
+        
+        return cell
+    }
+}
+
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let comment = presenter.comments?[indexPath.row]
+        let detailVC = ModuleBuilder.createDetailModule(comment: comment)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
 // MARK: - Setup funcs
 extension MainViewController {
     private func setupLayout() {
-        label.center = view.center
-        
         NSLayoutConstraint.activate([
-            button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            button.centerXAnchor.constraint(equalTo: label.centerXAnchor),
-            button.widthAnchor.constraint(equalToConstant: 200),
-            button.heightAnchor.constraint(equalToConstant: 50)
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }

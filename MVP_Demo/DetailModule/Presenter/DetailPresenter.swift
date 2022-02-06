@@ -34,5 +34,4 @@ class DetailPresenter: DetailViewPresenterProtocol {
         view?.setComment(comment)
     }
     
-    
 }
