@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 protocol DetailViewProtocol: AnyObject {
     func setComment(_ comment: Comment?)
 }
