@@ -15,22 +15,27 @@ protocol MainViewProtocol: AnyObject {
 
 protocol MainViewPresenter: AnyObject {
     var comments: [Comment]? { get set }
-    init(view: MainViewProtocol, networkService: NetworkServiceProtocol)
+    init(view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol)
     func getComments()
+    func didTapComment(_ comment: Comment?)
 }
 
 class MainPresenter: MainViewPresenter {
     
     weak var view: MainViewProtocol?
     let networkService: NetworkServiceProtocol
+    var router: RouterProtocol?
     
     var comments: [Comment]?
     
-    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol) {
+    
+    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol) {
         self.view = view
         self.networkService = networkService
+        self.router = router
         getComments()
     }
+    
     
     func getComments() {
         networkService.fetchComments { [weak self] result in
@@ -44,6 +49,10 @@ class MainPresenter: MainViewPresenter {
                 }
             }
         }
+    }
+    
+    func didTapComment(_ comment: Comment?) {
+        router?.showDetail(from: comment)
     }
     
 }

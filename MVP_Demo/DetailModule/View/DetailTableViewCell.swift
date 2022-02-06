@@ -25,7 +25,7 @@ class DetailTableViewCell: UITableViewCell {
     }(UILabel())
     
     var headLabel: UILabel = {
-        $0.font = .systemFont(ofSize: 17, weight: .bold)
+        $0.font = .systemFont(ofSize: 17, weight: .heavy)
         $0.lineBreakMode = .byWordWrapping
         $0.numberOfLines = 0
         $0.setContentHuggingPriority(.defaultLow, for: .horizontal)
@@ -42,9 +42,7 @@ class DetailTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         addAutoLayoutSubviews(hashLabel, postIdLabel, headLabel, bodyLabel)
-        
         setupLayout()
     }
     
@@ -72,13 +70,13 @@ extension DetailTableViewCell {
             postIdLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             headLabel.leadingAnchor.constraint(equalTo: postIdLabel.trailingAnchor, constant: 15),
-            headLabel.topAnchor.constraint(equalTo: topAnchor),
+            headLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             headLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             
             bodyLabel.leadingAnchor.constraint(equalTo: postIdLabel.trailingAnchor, constant: 15),
-            bodyLabel.topAnchor.constraint(equalTo: headLabel.bottomAnchor),
+            bodyLabel.topAnchor.constraint(equalTo: headLabel.bottomAnchor, constant: 5),
             bodyLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            bodyLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+            bodyLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
     }
 }

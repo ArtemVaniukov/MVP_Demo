@@ -16,7 +16,7 @@
 		3A9E02F527AFA77700BCBEDE /* MVP_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E02F427AFA77700BCBEDE /* MVP_DemoUITestsLaunchTests.swift */; };
 		3A9E030227AFA77F00BCBEDE /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E030127AFA77F00BCBEDE /* Comment.swift */; };
 		3A9E030427AFA7AE00BCBEDE /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E030327AFA7AE00BCBEDE /* MainPresenter.swift */; };
-		3A9E030A27AFB25500BCBEDE /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E030927AFB25500BCBEDE /* ModuleBuilder.swift */; };
+		3A9E030A27AFB25500BCBEDE /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E030927AFB25500BCBEDE /* AssemblyBuilder.swift */; };
 		3A9E030C27AFB45300BCBEDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9E030B27AFB45300BCBEDE /* Main.storyboard */; };
 		3A9E030E27AFB5BC00BCBEDE /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E030D27AFB5BC00BCBEDE /* MainPresenterTest.swift */; };
 		3A9E031127AFBEA800BCBEDE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E031027AFBEA800BCBEDE /* NetworkService.swift */; };
@@ -24,6 +24,8 @@
 		3A9E031A27AFD0F200BCBEDE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E031927AFD0F200BCBEDE /* DetailViewController.swift */; };
 		3A9E031C27AFDDD500BCBEDE /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E031B27AFDDD500BCBEDE /* DetailTableViewCell.swift */; };
 		3A9E031E27AFE35900BCBEDE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E031D27AFE35900BCBEDE /* UIView+Extension.swift */; };
+		3A9E032127AFE88C00BCBEDE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E032027AFE88C00BCBEDE /* Router.swift */; };
+		3A9E032327AFF7B400BCBEDE /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E032227AFF7B400BCBEDE /* RouterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +59,7 @@
 		3A9E02F427AFA77700BCBEDE /* MVP_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3A9E030127AFA77F00BCBEDE /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		3A9E030327AFA7AE00BCBEDE /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
-		3A9E030927AFB25500BCBEDE /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		3A9E030927AFB25500BCBEDE /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
 		3A9E030B27AFB45300BCBEDE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3A9E030D27AFB5BC00BCBEDE /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
 		3A9E031027AFBEA800BCBEDE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		3A9E031927AFD0F200BCBEDE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3A9E031B27AFDDD500BCBEDE /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		3A9E031D27AFE35900BCBEDE /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3A9E032027AFE88C00BCBEDE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3A9E032227AFF7B400BCBEDE /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +119,8 @@
 		3A9E02D027AFA77600BCBEDE /* MVP_Demo */ = {
 			isa = PBXGroup;
 			children = (
-				3A9E030927AFB25500BCBEDE /* ModuleBuilder.swift */,
+				3A9E030927AFB25500BCBEDE /* AssemblyBuilder.swift */,
+				3A9E032027AFE88C00BCBEDE /* Router.swift */,
 				3A9E031727AFD0CB00BCBEDE /* DetailModule */,
 				3A9E030527AFAF0900BCBEDE /* MainModule */,
 				3A9E031227AFBEC800BCBEDE /* ServiceLayer */,
@@ -182,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9E030D27AFB5BC00BCBEDE /* MainPresenterTest.swift */,
+				3A9E032227AFF7B400BCBEDE /* RouterTest.swift */,
 			);
 			path = TestMainModule;
 			sourceTree = "<group>";
@@ -376,9 +382,10 @@
 				3A9E02D627AFA77600BCBEDE /* MainViewController.swift in Sources */,
 				3A9E02D227AFA77600BCBEDE /* AppDelegate.swift in Sources */,
 				3A9E031527AFCF4B00BCBEDE /* DetailPresenter.swift in Sources */,
+				3A9E032127AFE88C00BCBEDE /* Router.swift in Sources */,
 				3A9E030227AFA77F00BCBEDE /* Comment.swift in Sources */,
 				3A9E02D427AFA77600BCBEDE /* SceneDelegate.swift in Sources */,
-				3A9E030A27AFB25500BCBEDE /* ModuleBuilder.swift in Sources */,
+				3A9E030A27AFB25500BCBEDE /* AssemblyBuilder.swift in Sources */,
 				3A9E031C27AFDDD500BCBEDE /* DetailTableViewCell.swift in Sources */,
 				3A9E031127AFBEA800BCBEDE /* NetworkService.swift in Sources */,
 			);
@@ -388,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9E032327AFF7B400BCBEDE /* RouterTest.swift in Sources */,
 				3A9E030E27AFB5BC00BCBEDE /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
